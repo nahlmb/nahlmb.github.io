@@ -35,7 +35,13 @@ body #logo {
 body #logo img {
   width: 85px;
   height: auto;
-  margin-left: 4em;
+  margin-left: 0px;
+}
+
+@media (min-width: 800px) {
+  body #logo img {
+    margin-left: 4em;
+  }
 }
 
 #main-info {
