@@ -44,7 +44,9 @@ body {
         img {
             width: 85px;
             height: auto;
-            margin-left: 4em;
+            @include desktop {
+                margin-left: 4em;
+            }
         }
     }
 }
