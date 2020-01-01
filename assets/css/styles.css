@@ -1,0 +1,163 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+body {
+  font-family: 'Mada', sans-serif;
+  color: white;
+}
+
+body #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4em;
+}
+
+@media (min-width: 800px) {
+  body #logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    width: 100%;
+  }
+}
+
+body #logo img {
+  width: 85px;
+  height: auto;
+  margin-left: 4em;
+}
+
+#main-info {
+  position: absolute;
+  display: inline-block;
+  margin-top: 12em;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  #main-info {
+    position: absolute;
+    margin: 0px;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+#main-info #taglines, #main-info #line, #main-info p {
+  width: 90%;
+}
+
+#main-info #taglines {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#main-info #taglines #main-tagline {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+@media (min-width: 800px) {
+  #main-info #taglines #main-tagline {
+    font-size: 64px;
+  }
+}
+
+#main-info #taglines #sub-tagline {
+  font-weight: normal;
+}
+
+#main-info #main-tagline, #main-info #sub-tagline, #main-info p, #main-info ul {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  #main-info #main-tagline, #main-info #sub-tagline, #main-info p, #main-info ul {
+    text-align: start;
+  }
+}
+
+@media (min-width: 800px) {
+  #main-info #sub-tagline, #main-info p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 800px) {
+  #main-info ul li a {
+    font-size: 20px;
+  }
+}
+
+#main-info #line {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 8em;
+  border: 0.4px solid white;
+}
+
+@media (min-width: 800px) {
+  #main-info #line {
+    margin-top: 4em;
+  }
+}
+
+#main-info p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-info ul {
+  list-style-type: none;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  #main-info ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#main-info ul li {
+  margin-bottom: 24px;
+}
+
+#main-info ul li a {
+  color: #18D764;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (min-width: 800px) {
+  #main-info ul li {
+    margin-bottom: 0px;
+    margin-right: 24px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,155 @@
+$colors : (
+    primary : #000,
+    primary-light : #fff,
+    accent: #18D764
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+}
+
+$desktop : 800px;
+
+@mixin desktop {
+    @media(min-width: #{$desktop}){
+        @content;
+    }
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: color(primary);
+}
+
+body {
+    font-family: 'Mada', sans-serif;
+    color: white;
+
+    #logo {
+
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 4em;
+
+        @include desktop {
+            justify-content: start;
+            width: 100%;
+        }
+
+        img {
+            width: 85px;
+            height: auto;
+            margin-left: 4em;
+        }
+    }
+}
+
+#main-info {
+    position: absolute;
+    display: inline-block;
+    margin-top: 12em;
+    width: 100%;
+
+    @include desktop {
+       position: absolute;
+       margin: 0px;
+       height: 100%;
+       display: grid;
+       grid-template-columns: 1fr;
+       justify-content: center;
+       align-content: center;
+    }
+
+
+    #taglines, #line, p {
+        width: 90%;
+    }
+
+    #taglines {
+        margin-right: auto;
+        margin-left: auto;
+
+        #main-tagline {
+            font-weight: 900;
+            font-size: 32px;
+            @include desktop {
+                font-size: 64px;
+            }
+        }
+
+        #sub-tagline {
+            font-weight: normal;
+
+        }
+    }
+
+    #main-tagline, #sub-tagline, p, ul {
+        text-align: center;
+
+        @include desktop {
+            text-align: start;
+        }
+
+    }
+
+    #sub-tagline, p{
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+
+    ul li a {
+        @include desktop {
+            font-size: 20px;
+        }
+    }
+
+    #line {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 8em;
+        border: 0.4px solid white;
+
+        @include desktop {
+            margin-top: 4em;
+        }
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktop {
+            display: flex;;
+        }
+
+        li {
+            a {
+                color: color(accent);
+                text-decoration: none;
+                font-weight: 700;
+            }
+            margin-bottom: 24px;
+
+            @include desktop {
+                margin-bottom: 0px;
+                margin-right: 24px;
+            }
+        }
+    }
+}
