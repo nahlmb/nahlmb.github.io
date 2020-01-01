@@ -34,7 +34,7 @@ body #logo {
 
 body #logo img {
   width: 85px;
-  height: auto;
+  height: 51px;
   margin-left: 0px;
 }
 
@@ -138,6 +138,7 @@ body #logo img {
   margin: 0;
   padding: 0;
   margin-top: 60px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -147,6 +148,7 @@ body #logo img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 0px;
   }
 }
 
@@ -165,5 +167,13 @@ body #logo img {
     margin-bottom: 0px;
     margin-right: 24px;
   }
+}
+
+#green-line {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background: #18D764;
 }
 /*# sourceMappingURL=styles.css.map */
